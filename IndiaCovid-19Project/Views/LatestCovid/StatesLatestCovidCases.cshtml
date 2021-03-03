@@ -1,0 +1,75 @@
+﻿@model IndiaCovid_19Project.Models.Regional
+
+@{
+    ViewBag.Title = "StatesLatestCovidCases";
+}
+
+<center>
+    <h2>Latest Covid Caes in States</h2>
+    </center>
+    <div>
+        <!--<-->
+        <!--<h4>Regional</h4>
+        <hr />-->
+        
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.loc)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.loc)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.confirmedCasesIndian)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.confirmedCasesIndian)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.confirmedCasesForeign)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.confirmedCasesForeign)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.discharged)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.discharged)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.deaths)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.deaths)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.totalConfirmed)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.totalConfirmed)
+                </dd>
+
+            </dl>
+    </div>
+
+<p style="text-align:right">
+    
+    @Html.ActionLink("Get Another State", "GetStatesLatestCase")
+</p>
+<style>
+    body {
+        background-color: rgb(243,243,255);
+    }
+</style>

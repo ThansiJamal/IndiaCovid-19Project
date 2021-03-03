@@ -1,0 +1,140 @@
+﻿@model IndiaCovid_19Project.Models.User
+
+@{
+    ViewBag.Title = "SignUp";
+}
+
+@*<h2>SignUp</h2>*@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid"></div>
+    <image src="~/Image/HomeLogo.png" align="left" alt="Snow" />
+    <div class="navbar-header">
+        <a style="padding-left: 460px;" class="navbar-brand" href="/Home/Home">Home</a>
+        <a class="navbar-brand" href="/Home/About">About</a>
+        <a class="navbar-brand" href="/Home/Contact">Contact</a>
+    </div>
+    <ul class="nav navbar-nav ">
+        <li><a class="navbar-brand" href="/Registration/SignUp"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a class="navbar-brand" href="/Login/SignIn"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+    <br />
+    <br /><br />
+    </body>
+</html>
+
+
+
+
+
+
+
+    <center>
+        @using (Html.BeginForm())
+        {@Html.AntiForgeryToken()
+
+        <div class="container center_div">
+            <h2 class="col-md-10">
+                Registration
+            </h2>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @*<div >
+                @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { placeholder = "Enter Name", @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                <br />
+            </div>
+
+
+            @*</div>*@
+
+            @*<div class="form-group">
+                @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { placeholder = "Enter Email Id", @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                <br />
+            </div>
+
+            @*</div>*@
+
+            @*<div class="form-group">
+                @Html.LabelFor(model => model.MobileNumber, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MobileNumber, new { htmlAttributes = new { placeholder = "Enter Mobile Number", @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.MobileNumber, "", new { @class = "text-danger" })
+                <br />
+            </div>
+
+            @*</div>*@
+            <!--<-->@*div class="form-group">
+                @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { placeholder = "Enter Password", @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                <br />
+            </div>
+
+            @*</div>*@
+
+            @*<div class="form-group">
+                @Html.LabelFor(model => model.ConfirmPassword, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ConfirmPassword, new { htmlAttributes = new { placeholder = "Enter Confirm Password", @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
+                <br />
+            </div>
+
+            @*</div>*@
+
+            <div class="form-group">
+                <div class="col-md-10">
+                    <input type="submit" value="Submit" class="btn btn-info" />
+                    @*<button type="button" class="btn btn-primary btn-lg">Submit</button>*@
+                </div>
+            </div>
+
+        </div>
+
+    }
+    </center>
+    <style>
+
+        body {
+            background-color: rgb(243,243,255);
+        }
+
+        .btn-info {
+            width: 60%;
+        }
+
+        .col-md-10 {
+            margin-left: 100px;
+        }
+        .navbar-brand {
+            color: silver;
+            font-size: 20px;
+        }
+    </style>
+
+
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+
+
+
+    @*<div>
+            @Html.ActionLink("Back to List", "Index")
+        </div>*@

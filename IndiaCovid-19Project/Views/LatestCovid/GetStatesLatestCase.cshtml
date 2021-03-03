@@ -1,0 +1,47 @@
+﻿@model IndiaCovid_19Project.Models.Regional
+@{
+    ViewBag.Title = "GetStatesLatestCase";
+}
+
+<h2>GetStatesLatestCase</h2>
+<!DOCTYPE html>
+<html>
+
+@using (Html.BeginForm("GetStatesLatestCase", "LatestCovid"))
+{<body>
+    <center>
+        @Html.TextBoxFor(m => m.loc, new { placeholder = "Enter State", @class = "form-control" })
+        <br />
+        <div>
+                   <input type="submit" value="Show Data" class="btn btn-primary" />
+
+               </div>
+               <br />
+
+               <!--<div class="container">-->
+                   @*@Html.ActionLink("Total States Latest Covid", "GetStatesTotal")*@
+                   @*<a href="/LatestCovid/">*@
+                       <!--<span class="glyphicon glyphicon-search" onclick="location.href='StatesLatestCovidCases.cshtml'"></span>-->
+                   @*</a>*@
+               <!--</div>-->
+
+    </center>
+</body>
+}
+</html>
+<style>
+    .icon-bar {
+        width: 90px;
+        background-color: #555;
+    }
+
+    .btn-primary {
+        width: 60%
+    }
+
+    body {
+        background-color: rgb(243,243,255);
+    }
+
+</style>
+

@@ -1,0 +1,95 @@
+﻿@model IndiaCovid_19Project.Models.Contact
+@{
+    ViewBag.Title = "Contact";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid"></div>
+    <image src="~/Image/HomeLogo.png" align="left" alt="Snow" />
+    <div class="navbar-header">
+        <a style="padding-left: 460px;" class="navbar-brand" href="/Home/Home">Home</a>
+        <a class="navbar-brand" href="/Home/About">About</a>
+        <a class="navbar-brand" href="/Home/Contact">Contact</a>
+    </div>
+    <ul class="nav navbar-nav ">
+        <li><a class="navbar-brand" href="/Registration/SignUp"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a class="navbar-brand" href="/Login/SignIn"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+    <br />
+    <br />
+    <br />
+    <center>
+        <h2>Contact Us</h2>
+    </center>
+    <div class="b">
+        <label><b>Name</b></label><br />
+        <input type="text" style="width:130%"><br>
+        <label><b>Email</b></label><br />
+        <input type="text" style="width:130%"><br />
+        <label><b>Phone Number</b></label><br />
+        <input type="text" style="width:130%"><br />
+        <label><b>Message</b></label><br />
+        <textarea placeholder="Write Something..." style="width:130%"></textarea><br />
+        <input type="submit" value="Submit" class="btn btn-info" />
+
+    </div>
+    @*<div class="a" style="width: 100%">
+            <iframe width="800" height="500" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=kerala,India+(Your%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+            <a href="https://www.mapsdirections.info/en/measure-map-radius/"></a>
+        </div>*@
+
+
+</body>
+</html>
+@*<div class="b">
+    <form>*@
+        @*<br />
+        @Html.TextBoxFor(m => m.Name, new { placeholder = "Name", @class = "form-control form-control-custom" })<br />
+        @Html.TextBoxFor(m => m.Email, new { placeholder = "Email", @class = "form-control" })<br />
+        @Html.TextBoxFor(m => m.Phone, new { placeholder = "Phone Number", @class = "form-control" })<br />
+        @Html.TextAreaFor(m => m.Message, new { placeholder = "Message", @class = "form-control" })<br />*@
+
+<style>
+    body {
+        background-color: rgb(243,243,255);
+    }
+
+    .navbar-brand {
+        color: silver;
+        font-size: 20px;
+    }
+    .btn-info {
+        width: 130%;
+    }
+    h2 {
+        text-align: center;
+    }
+    div.a {
+        position: absolute;
+        left: auto;
+    }
+    div.b {
+        position: absolute;
+        margin-left: 700px;
+       /* padding: 1px;
+        background: lightblue;
+        background-clip: border-box;*/
+    }
+    
+   /* body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+*/
+    /*form {
+        border: 3px solid #f1f1f1;
+    }*/
+    
+</style>
